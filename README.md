@@ -68,17 +68,6 @@ Using **describe()** we could get the following result for the numerical feature
 -In the range of 0-500 loan's status is either late or current.While the range of 500-4000 , most of the loans the repaid.
 -The probability of default for loans increases as the the interest increases.
 -----------------------------------------------------------------------------------------------------------------------------------------
-
-
-Before modelling and after splitting we scaled the data using standardization to shift the distribution to have a mean of zero and a standard deviation of one.
-
-from sklearn.preprocessing import StandardScaler
-
-scaler = StandardScaler()
-X1 = scaler.fit_transform(X1)
-```
-**fit_transform()** is used on the training data so that we can scale the training data and also learn the scaling parameters of that data. Here, the model built by us will learn the mean and variance of the features of the training set. These learned parameters are then used to scale our test data.
-**transform()** uses the same mean and variance as it is calculated from our training data to transform our test data. Thus, the parameters learned by our model using the training data will help us to transform our test data. As we do not want to be biased with our model, but we want our test data to be a completely new and a surprise set for our model.
 ## Model Building
 #### Metrics considered for Model Evaluation
 **Accuracy , Precision , Recall and F1 Score**
