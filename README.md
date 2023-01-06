@@ -84,21 +84,11 @@ X1 = scaler.fit_transform(X1)
 - Precision: What proportion of predicted positives are truly positive ?
 - Recall: What proportion of actual positives is correctly classified ?
 - F1 Score : Harmonic mean of Precision and Recall
-### Extra trees Classifier:
-Extremely Randomized Trees Classifier(Extra Trees Classifier) is a type of ensemble learning technique which aggregates the results of multiple de-correlated decision trees collected in a “forest” to output it's classification result.
 ### Mutual Info Classifier:
 Mutual information (MI) [1] between two random variables is a non-negative value, which measures the dependency between the variables.
 ~~~
 ### Choosing the features
-From the above two methods, we got which features are highly correlated with the target variable.Those features were used to train two different models to check the accuracy.
-#### 1. Applying SVM on MI columns
-By applying on the MI columns, the accuracy got from the confusion matrix was 91.808%.
-#### 2. Applying G Boost  on MI columns
-By applying XGBoost Classifier on the  MI columns,the accuracy got from the confusion matrix was 92.36%.
-#### 3. Applying SVM on Extra trees columns
-By applying on the Extra treescolumns, the accuracy got from the confusion matrix remained was 91.6 %.
-#### 4. Applying GBoost  on Extra trees columns
-By applying GBoost Classifier on the Extra treescolumns,the accuracy we got from the confusion matrix was 92.26 %.
+From the above two methods, we got which features are highly correlated with the target variable.Those features were used to train two different models which are G Boost and SVM to check the accuracy.
 ## Deployment
 you can access our app by following this link (https://bondoraloans.herokuapp.com/)
 ### Streamlit
